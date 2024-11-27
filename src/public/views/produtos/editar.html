@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastrar Produto | SGE</title>
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+  </head>
+  <body>
+    <nav>
+      <div>
+        <a href="index.html">SGE</a>
+      </div>
+    </nav>
+
+    <main>
+      <div class="wrapper">
+        <section id="cadastro-produto">
+          <header>
+            <h2>Editar Produto</h2>
+          </header>
+          <form>
+            <div>
+              <label for="id-input">ID</label>
+              <input type="text" name="id-input" id="id-input" disabled />
+            </div>
+
+            <div>
+              <label for="nome-input">Nome</label>
+              <input type="text" name="nome-input" id="nome-input" />
+            </div>
+
+            <div>
+              <select name="categoria-select" id="categoria-select">
+                <option value="" disabled selected>
+                  Escolha uma categoria
+                </option>
+              </select>
+            </div>
+
+            <div>
+              <label for="peso-input">Peso (Kgs)</label>
+              <input type="text" name="peso-input" id="peso-input" />
+            </div>
+
+            <div>
+              <label for="preco-input">Preço</label>
+              <input type="text" name="preco-input" id="preco-input" />
+            </div>
+
+            <div>
+              <label for="preco-min-input">Preço Mínimo de Venda</label>
+              <input type="text" name="preco-min-input" id="preco-min-input" />
+            </div>
+
+            <div>
+              <label for="garantia-input">Garantia (Meses)</label>
+              <input
+                type="number"
+                name="garantia-input"
+                id="garantia-input"
+                min="0"
+              />
+            </div>
+
+            <div>
+              <label for="descricao-textarea">Descrição</label> <br />
+              <textarea
+                name="descricao"
+                id="descricao-textarea"
+                rows="5"
+                cols="50"
+              >
+              </textarea>
+            </div>
+
+            <fieldset>
+              <legend>O Produto está disponível em estoque?</legend>
+              <div>
+                <input
+                  type="radio"
+                  name="produto-disponivel"
+                  id="produto-disponivel-sim"
+                  value="true"
+                  checked
+                />
+                <label for="produto-disponivel-sim">Sim</label>
+
+                <input
+                  type="radio"
+                  name="produto-disponivel"
+                  value="false"
+                  id="produto-disponivel-nao"
+                />
+                <label for="produto-disponivel-nao">Não</label>
+              </div>
+            </fieldset>
+            <div>
+              <a href="index.html">Voltar</a>
+              <button id="salvar-btn" type="button">Salvar</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer>© Todos os direitos reservados</footer>
+    <script type="module" src="../../assets/js/produtos/editar.js"></script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: auto 10px;
+}
+
+header {
+    padding: 16px 0;
+}
+
+form div {
+    margin: 12px 0;
+}
+
+tbody a {
+    margin: 0 6px;
+}
