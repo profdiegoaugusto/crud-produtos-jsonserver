@@ -1,5 +1,6 @@
 import { ProdutoService } from "../../../services/produto-service.js";
 
+let produto = { };
 const produtoService = new ProdutoService();
 
 const URL_DADOS_CATEGORIAS_PRODUTOS = "../../../../data/categorias-produtos.json"
@@ -14,12 +15,13 @@ const garantiaMesesInput = document.querySelector("#garantia-input");
 const descricaoTextarea = document.querySelector("#descricao-textarea");
 const produtoDisponivelInput = document.querySelector('input[name="produto-disponivel"]:checked');
 
-const salvarBtn = document.querySelector("#salvar-btn");
+const atualizarBtn = document.querySelector("#atualizar-btn");
 
 
 function salvar() {
 
     let produto = {
+        id: idInput.value,
         nome: nomeInput.value.trim(),
         categoria: categoriaSelect.value,
         pesoKgs: +pesoKgInput.value,
@@ -31,11 +33,9 @@ function salvar() {
         criadoEm: new Date().toISOString(),
         atualizadoEm: new Date().toISOString()
     }
-
     console.table(produto);
-    produtoService.criarProduto(produto);
-    window.location.assign("index.html");
-    
+    produtoService.atualizarProduto(produto.id, produto);
+    window.location.assign("index.html"); 
 }
 
 
@@ -61,5 +61,25 @@ async function preencherSelectCategorias() {
 }
 
 
-window.addEventListener("load", preencherSelectCategorias);
-salvarBtn.addEventListener("click", salvar);
+async function mostrarProduto() {
+
+    let id = sessionStorage.getItem("id");
+    produto = await produtoService.getProduto(id);
+
+    idInput.value = id;
+    nomeInput.value = produto.nome;
+    categoriaSelect.value = produto.categoria;
+    pesoKgInput.value = produto.pesoKgs;
+    precoInput.value = produto.preco;
+    precoMinInput.value = produto.precoMinimoVenda;
+    garantiaMesesInput.value = produto.garantiaMeses;
+    descricaoTextarea.value = produto.descricao;
+    produtoDisponivelInput.value = produto.estaDisponivel;
+}
+
+window.addEventListener("load", () => {
+    preencherSelectCategorias();
+    mostrarProduto();
+});
+
+atualizarBtn.addEventListener("click", salvar);

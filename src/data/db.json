@@ -1,7 +1,7 @@
 {
   "produtos": [
     {
-      "id": 1,
+      "id": "1",
       "nome": "Smartphone X",
       "categoria": "Eletrônicos",
       "pesoKgs": 0.18,
@@ -14,7 +14,7 @@
       "atualizadoEm": "2024-06-01T10:00:00"
     },
     {
-      "id": 2,
+      "id": "2",
       "nome": "Notebook Pro",
       "categoria": "Eletrônicos",
       "pesoKgs": 1.5,
@@ -27,7 +27,7 @@
       "atualizadoEm": "2024-07-01T11:00:00"
     },
     {
-      "id": 3,
+      "id": "3",
       "nome": "TV 4K Ultra HD",
       "categoria": "Eletrônicos",
       "pesoKgs": 8,
@@ -40,7 +40,7 @@
       "atualizadoEm": "2024-08-01T12:00:00"
     },
     {
-      "id": 4,
+      "id": "4",
       "nome": "Fone de Ouvido Bluetooth",
       "categoria": "Eletrônicos",
       "pesoKgs": 0.05,
@@ -53,7 +53,7 @@
       "atualizadoEm": "2024-09-01T13:00:00"
     },
     {
-      "id": 5,
+      "id": "5",
       "nome": "Câmera DSLR",
       "categoria": "Eletrônicos",
       "pesoKgs": 1.2,
@@ -66,7 +66,7 @@
       "atualizadoEm": "2024-10-01T14:00:00"
     },
     {
-      "id": 6,
+      "id": "6",
       "nome": "Geladeira Frost Free",
       "categoria": "Eletrodomésticos",
       "pesoKgs": 70,
@@ -79,7 +79,7 @@
       "atualizadoEm": "2024-01-01T09:00:00"
     },
     {
-      "id": 7,
+      "id": "7",
       "nome": "Máquina de Lavar",
       "categoria": "Eletrodomésticos",
       "pesoKgs": 55,
@@ -92,7 +92,7 @@
       "atualizadoEm": "2024-02-01T09:30:00"
     },
     {
-      "id": 8,
+      "id": "8",
       "nome": "Micro-ondas",
       "categoria": "Eletrodomésticos",
       "pesoKgs": 15,
@@ -105,7 +105,7 @@
       "atualizadoEm": "2024-03-01T10:00:00"
     },
     {
-      "id": 9,
+      "id": "9",
       "nome": "Fogão 5 Bocas",
       "categoria": "Eletrodomésticos",
       "pesoKgs": 30,
@@ -118,7 +118,7 @@
       "atualizadoEm": "2024-04-01T11:00:00"
     },
     {
-      "id": 10,
+      "id": "10",
       "nome": "Aspirador de Pó",
       "categoria": "Eletrodomésticos",
       "pesoKgs": 5,
@@ -131,7 +131,7 @@
       "atualizadoEm": "2024-05-01T12:00:00"
     },
     {
-      "id": 11,
+      "id": "11",
       "nome": "Bicicleta Mountain Bike",
       "categoria": "Esportes",
       "pesoKgs": 14,
@@ -144,7 +144,7 @@
       "atualizadoEm": "2024-06-01T13:00:00"
     },
     {
-      "id": 12,
+      "id": "12",
       "nome": "Tênis de Corrida",
       "categoria": "Esportes",
       "pesoKgs": 0.7,
@@ -157,7 +157,7 @@
       "atualizadoEm": "2024-07-01T14:00:00"
     },
     {
-      "id": 13,
+      "id": "13",
       "nome": "Raquete de Tênis",
       "categoria": "Esportes",
       "pesoKgs": 0.3,
@@ -170,7 +170,7 @@
       "atualizadoEm": "2024-08-01T15:00:00"
     },
     {
-      "id": 14,
+      "id": "14",
       "nome": "Kit de Halteres",
       "categoria": "Esportes",
       "pesoKgs": 20,
@@ -183,17 +183,30 @@
       "atualizadoEm": "2024-09-01T16:00:00"
     },
     {
-      "id": 15,
-      "nome": "Bola de Futebol",
+      "id": "15",
+      "nome": "Bola de Futebol Americano",
       "categoria": "Esportes",
       "pesoKgs": 0.45,
       "preco": 100,
       "precoMinimoVenda": 90,
       "garantiaMeses": 6,
       "descricao": "Bola de futebol oficial tamanho 5.",
-      "estaDisponivel": true,
-      "criadoEm": "2023-10-01T17:00:00",
-      "atualizadoEm": "2024-10-01T17:00:00"
+      "estaDisponivel": "true",
+      "criadoEm": "2024-11-27T21:49:23.637Z",
+      "atualizadoEm": "2024-11-27T21:49:23.637Z"
+    },
+    {
+      "id": "d136",
+      "nome": "Smartphone XYZ",
+      "categoria": "Eletrônicos",
+      "pesoKgs": 123,
+      "preco": 123,
+      "precoMinimoVenda": 1231,
+      "garantiaMeses": 12,
+      "descricao": "123123",
+      "estaDisponivel": "true",
+      "criadoEm": "2024-11-27T21:49:53.849Z",
+      "atualizadoEm": "2024-11-27T21:49:53.849Z"
     }
   ]
 }

@@ -60,12 +60,16 @@ function criarOpcoes(td) {
     linkAbrir.addEventListener("click", (event) => {
         let id = obterIdLinhaTabela(event);
         sessionStorage.setItem("id", id);
-    })
+    });
     td.appendChild(linkAbrir);
 
     const linkEditar = document.createElement("a");
     linkEditar.innerText = "Editar";
     linkEditar.href = "editar.html";
+    linkEditar.addEventListener("click", (event) => {
+        let id = obterIdLinhaTabela(event);
+        sessionStorage.setItem("id", id);
+    });
     td.appendChild(linkEditar);
 
     const linkExcluir = document.createElement("a");
