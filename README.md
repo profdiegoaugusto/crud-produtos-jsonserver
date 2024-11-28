@@ -2,7 +2,6 @@
 
 Este tutorial orienta na configuração inicial de um sistema simples utilizando Node.js e Json Server.
 
----
 
 ## 1. Instalação
 
@@ -68,7 +67,6 @@ No arquivo `package.json`, adicione um script `start` na seção `scripts`:
 }
 ```
 
----
 
 ## 2. Criar Base de Dados
 
@@ -97,9 +95,7 @@ Adicione dados iniciais no arquivo `db.json`:
 ```
 
 ### 2.2 Configurar Diretório para Categorias
-Se necessário, crie outros arquivos no diretório `data`, como `categorias-produtos.json`.
-
----
+Crie o diretório `data` na pasta `public`, com o arquivo `categorias-produtos.json`.
 
 ## 3. Rodar o Servidor
 
