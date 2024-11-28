@@ -1,7 +1,7 @@
 export class ProdutoService {
 
     constructor() {
-      this.urlBase = "http://localhost:3000/produtos";
+      this.urlBase = "/produtos";
     }
   
     async getProdutos() {
