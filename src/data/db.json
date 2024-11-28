@@ -194,19 +194,6 @@
       "estaDisponivel": "true",
       "criadoEm": "2024-11-27T21:49:23.637Z",
       "atualizadoEm": "2024-11-27T21:49:23.637Z"
-    },
-    {
-      "id": "d136",
-      "nome": "Smartphone XYZ",
-      "categoria": "Eletrônicos",
-      "pesoKgs": 123,
-      "preco": 123,
-      "precoMinimoVenda": 1231,
-      "garantiaMeses": 12,
-      "descricao": "123123",
-      "estaDisponivel": "true",
-      "criadoEm": "2024-11-28T10:29:07.201Z",
-      "atualizadoEm": "2024-11-28T10:29:07.201Z"
     }
   ]
 }

@@ -24,13 +24,17 @@ async function criarListaDetalhes() {
         if (rotulos[i].includes("Preço")) {
 
             li.appendChild(document.createTextNode(formatarMoeda(valores[i]))); // Adiciona o valor como um nó de texto
+        
+        } else if (rotulos[i].includes("Está")) {
 
-            
-        } else {
+            let estaDisponivelEstoque = (valores[i] === true) ? "Sim" : "Não";
+            li.appendChild(document.createTextNode(estaDisponivelEstoque));
+    
+        }
+        else {
             li.appendChild(document.createTextNode(valores[i])); // Adiciona o valor como um nó de texto
         }
-
-        
+          
         ul.appendChild(li);
     }
 }

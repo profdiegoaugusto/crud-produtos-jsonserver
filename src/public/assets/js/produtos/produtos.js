@@ -13,6 +13,7 @@ function excluir(event) {
 
     if (confirmacao) {
         produtoService.excluirProduto(id);
+        excluirLinhaTabela(event);
     }
 
 }
@@ -50,6 +51,12 @@ function preencherTabela(produtos) {
 function obterIdLinhaTabela(event) {
     let tr = event.target.parentNode.parentNode;
     return tr.firstChild.innerText;
+}
+
+function excluirLinhaTabela(event) {
+    const tbody = document.querySelector("tbody");
+    let tr = event.target.parentNode.parentNode;
+    tbody.removeChild(tr);
 }
 
 function criarOpcoes(td) {
