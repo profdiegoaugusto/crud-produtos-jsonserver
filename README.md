@@ -44,7 +44,7 @@ Crie o arquivo `index.js` na raiz do projeto e insira o código abaixo:
 ```javascript
 const jsonServer = require('json-server');
 const server = jsonServer.create();
-const router = jsonServer.router('db.json');
+const router = jsonServer.router('data/db.json');
 const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
