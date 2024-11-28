@@ -9,9 +9,9 @@
       "precoMinimoVenda": 1100,
       "garantiaMeses": 24,
       "descricao": "Smartphone de última geração com tela de 6.5 polegadas.",
-      "estaDisponivel": true,
-      "criadoEm": "2023-06-01T10:00:00",
-      "atualizadoEm": "2024-06-01T10:00:00"
+      "estaDisponivel": "true",
+      "criadoEm": "2024-11-27T22:57:08.813Z",
+      "atualizadoEm": "2024-11-27T22:57:08.814Z"
     },
     {
       "id": "2",
@@ -205,8 +205,8 @@
       "garantiaMeses": 12,
       "descricao": "123123",
       "estaDisponivel": "true",
-      "criadoEm": "2024-11-27T21:49:53.849Z",
-      "atualizadoEm": "2024-11-27T21:49:53.849Z"
+      "criadoEm": "2024-11-28T10:29:07.201Z",
+      "atualizadoEm": "2024-11-28T10:29:07.201Z"
     }
   ]
 }

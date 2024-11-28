@@ -1,4 +1,5 @@
 import { ProdutoService } from "../../../services/produto-service.js";
+import { formatarMoeda } from "../../../utils/formatador.js";
 
 const produtoService = new ProdutoService();
 
@@ -18,7 +19,18 @@ async function criarListaDetalhes() {
         const strong = document.createElement("strong");
         strong.innerText = rotulos[i] + ": "; // Adiciona um espaço e dois-pontos após o rótulo
         li.appendChild(strong);
-        li.appendChild(document.createTextNode(valores[i])); // Adiciona o valor como um nó de texto
+
+
+        if (rotulos[i].includes("Preço")) {
+
+            li.appendChild(document.createTextNode(formatarMoeda(valores[i]))); // Adiciona o valor como um nó de texto
+
+            
+        } else {
+            li.appendChild(document.createTextNode(valores[i])); // Adiciona o valor como um nó de texto
+        }
+
+        
         ul.appendChild(li);
     }
 }

@@ -1,4 +1,5 @@
 import { ProdutoService } from "../../../services/produto-service.js";
+import { formatarMoeda } from "../../../utils/formatador.js";
 
 let produto = { };
 const produtoService = new ProdutoService();
@@ -13,14 +14,14 @@ const precoInput = document.querySelector("#preco-input");
 const precoMinInput = document.querySelector("#preco-min-input");
 const garantiaMesesInput = document.querySelector("#garantia-input");
 const descricaoTextarea = document.querySelector("#descricao-textarea");
-const produtoDisponivelInput = document.querySelector('input[name="produto-disponivel"]:checked');
+const produtoDisponivelInput = document.querySelector('input[name="produto-disponivel"]');
 
 const atualizarBtn = document.querySelector("#atualizar-btn");
 
 
 function salvar() {
-
-    let produto = {
+    
+    let produtoAtualizado = {
         id: idInput.value,
         nome: nomeInput.value.trim(),
         categoria: categoriaSelect.value,
@@ -29,12 +30,12 @@ function salvar() {
         precoMinimoVenda: +precoMinInput.value,
         garantiaMeses: +garantiaMesesInput.value,
         descricao: descricaoTextarea.value,
-        estaDisponivel: produtoDisponivelInput.value,
-        criadoEm: new Date().toISOString(),
+        estaDisponivel: JSON.parse(obterValorRadio()),
+        criadoEm: produto.criadoEm,
         atualizadoEm: new Date().toISOString()
     }
-    console.table(produto);
-    produtoService.atualizarProduto(produto.id, produto);
+
+    produtoService.atualizarProduto(produtoAtualizado.id, produtoAtualizado);
     window.location.assign("index.html"); 
 }
 
@@ -70,11 +71,20 @@ async function mostrarProduto() {
     nomeInput.value = produto.nome;
     categoriaSelect.value = produto.categoria;
     pesoKgInput.value = produto.pesoKgs;
-    precoInput.value = produto.preco;
-    precoMinInput.value = produto.precoMinimoVenda;
+    precoInput.value = formatarMoeda(produto.preco);
+    precoMinInput.value = formatarMoeda(produto.precoMinimoVenda);
     garantiaMesesInput.value = produto.garantiaMeses;
     descricaoTextarea.value = produto.descricao;
     produtoDisponivelInput.value = produto.estaDisponivel;
+}
+
+
+function obterValorRadio() {
+    const radioSelecionado = document.querySelector('input[name="produto-disponivel"]:checked');
+    if (radioSelecionado) {
+        return radioSelecionado.value.toString(); // Retorna "true" ou "false", dependendo do valor marcado
+    }
+    return null; // Caso nenhum esteja marcado (situação incomum para rádios)
 }
 
 window.addEventListener("load", () => {
@@ -83,3 +93,5 @@ window.addEventListener("load", () => {
 });
 
 atualizarBtn.addEventListener("click", salvar);
+
+
