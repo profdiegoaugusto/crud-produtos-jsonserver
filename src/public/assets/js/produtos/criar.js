@@ -20,6 +20,7 @@ const salvarBtn = document.querySelector("#salvar-btn");
 function salvar() {
 
     let produto = {
+        id: null,
         nome: nomeInput.value.trim(),
         categoria: categoriaSelect.value,
         pesoKgs: +pesoKgInput.value,
